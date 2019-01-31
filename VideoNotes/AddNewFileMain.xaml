@@ -1,0 +1,82 @@
+﻿<Window x:Class="VideoNotes.AddNewFileMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoNotes"
+        mc:Ignorable="d"
+        Title="Add New Clip" Height="356.864" Width="533.011">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS" 
+        FontWeight="Bold" FontSize="18" Foreground="#0066cc" Content="Enter Clip Info"/>
+        <Grid Margin="10,10.143,10.286,9.714" Grid.Row="1" RenderTransformOrigin="0.602,0.478">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="120*" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+            <!-- Clip Title -->
+            <Label Height="25" FontWeight="Bold" RenderTransformOrigin="0.5,0.503" Content="Clip Title:" Grid.Column="0" Grid.Row="1"/>
+
+            <Label Margin="0,0,0,5" FontWeight="Bold"/>
+            <TextBox Name="NewClipTitle" Grid.ColumnSpan="1" Grid.RowSpan="1"  Grid.Row="1" Grid.Column="1" Width="318" Height=" 25"  >
+                Enter Title
+            </TextBox>
+
+            <!-- Clip Des -->
+            <Label Height="25" FontWeight="Bold" RenderTransformOrigin="0.5,0.503" Content="Clip Description:" Grid.Column="0" Grid.Row="2"/>
+
+            <Label Margin="0,0,0,5" FontWeight="Bold"/>
+            <TextBox Name="NewClipDes" Grid.ColumnSpan="1" Grid.RowSpan="1"  Grid.Row="2" Grid.Column="1" Width="318" Height=" 25"  >
+                Enter Description
+            </TextBox>
+
+            <!-- Clip Filename -->
+            <Label Height="25" FontWeight="Bold" RenderTransformOrigin="0.5,0.503" Content="Clip Filename:" Grid.Column="0" Grid.Row="3"/>
+
+            <Label Margin="0,0,0,5" FontWeight="Bold"/>
+            <Label Name="NewClipFile" Grid.ColumnSpan="1"  Grid.Row="3" Grid.Column="1" Height=" 25" Margin="43.857,13.143,190.857,12.143"  >
+                Select Clip
+            </Label>
+            <Button Name="NewClipButton" Grid.ColumnSpan="1" Click="BrowseButton_Click"  Grid.Row="3" Grid.Column="1" Height=" 25" Margin="215.857,13.143,43.857,12.143"  >
+                Browse
+            </Button>
+
+            <Label Height="25" FontWeight="Bold" RenderTransformOrigin="0.5,0.503" Content="Clip Game:" Grid.Column="0" Grid.Row="0"/>
+
+            <Label Margin="0,0,0,5" FontWeight="Bold"/>
+
+            <ComboBox Name="GameDropDown" Grid.Column="1" Grid.Row="0" Height="25" Width="150" HorizontalAlignment="Left" Margin="43.857,13,0,12.286">
+
+            </ComboBox>
+
+            <Label Name="NoClip" Visibility="Hidden" Grid.ColumnSpan="1"  HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" Margin="96.857,18.857,177.857,9.714" Background="White" Foreground="#FFF40000" FontWeight="Bold" Width="131"  >
+                No Clip Selected
+            </Label>
+            <!-- Done Button -->
+            <Button Grid.Row="4" Width="90" Height=" 25" HorizontalAlignment="Right" Click="DoneButton_Click" Grid.Column="2">Done</Button>
+            <!-- Cancel Button -->
+            <Button Grid.Row="4"  Width="90" Height="25" HorizontalAlignment="Left" Click="CancelButton_Click">Cancel</Button>
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>
